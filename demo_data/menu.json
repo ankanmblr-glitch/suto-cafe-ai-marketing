@@ -1,0 +1,71 @@
+{
+  "categories": [
+    {
+      "name": "Coffee & Espresso",
+      "items": [
+        {"name": "Cappuccino", "price": 120, "type": "hot", "popular": true},
+        {"name": "Cold Coffee", "price": 130, "type": "cold", "popular": true},
+        {"name": "Café Latte", "price": 130, "type": "hot"},
+        {"name": "Americano", "price": 100, "type": "hot"}
+      ]
+    },
+    {
+      "name": "Signature Frappes",
+      "items": [
+        {"name": "Suto Special Frappe", "price": 180, "type": "cold", "popular": true, "usp": true},
+        {"name": "Brownie Frappe", "price": 190, "type": "cold", "popular": true, "usp": true},
+        {"name": "Oreo Frappe", "price": 175, "type": "cold"},
+        {"name": "Caramel Frappe", "price": 175, "type": "cold"}
+      ]
+    },
+    {
+      "name": "Ice Teas & Smoothies",
+      "items": [
+        {"name": "Peach Ice Tea", "price": 140, "type": "cold"},
+        {"name": "Lemon Ice Tea", "price": 130, "type": "cold"},
+        {"name": "Mango Smoothie", "price": 150, "type": "cold"},
+        {"name": "Mixed Berry Smoothie", "price": 160, "type": "cold"}
+      ]
+    },
+    {
+      "name": "Mocktails",
+      "items": [
+        {"name": "Virgin Mojito", "price": 160, "type": "cold"},
+        {"name": "Blue Lagoon", "price": 170, "type": "cold"},
+        {"name": "Watermelon Cooler", "price": 150, "type": "cold", "summer_hit": true}
+      ]
+    },
+    {
+      "name": "Food",
+      "items": [
+        {"name": "Tandoori Maggi", "price": 110, "type": "hot", "popular": true, "usp": true},
+        {"name": "Falafel Wrap", "price": 160, "type": "hot", "usp": true},
+        {"name": "8\" Personal Pizza", "price": 200, "type": "hot", "popular": true},
+        {"name": "Veg Burger", "price": 150, "type": "hot"},
+        {"name": "Garlic Toast", "price": 90, "type": "hot"},
+        {"name": "Nachos with Dip", "price": 130, "type": "cold"},
+        {"name": "Pasta Arrabbiata", "price": 170, "type": "hot"},
+        {"name": "Paneer Sandwich", "price": 140, "type": "hot"}
+      ]
+    },
+    {
+      "name": "Desserts",
+      "items": [
+        {"name": "Chocolate Brownie", "price": 120, "type": "dessert", "popular": true},
+        {"name": "Belgian Waffle", "price": 150, "type": "dessert"},
+        {"name": "Cheesecake Slice", "price": 160, "type": "dessert"}
+      ]
+    },
+    {
+      "name": "Hot Beverages",
+      "items": [
+        {"name": "Hot Chocolate", "price": 130, "type": "hot", "winter_hit": true},
+        {"name": "Masala Chai", "price": 80, "type": "hot"},
+        {"name": "Green Tea", "price": 90, "type": "hot"}
+      ]
+    }
+  ],
+  "price_range": {"min": 80, "max": 250},
+  "veg_only": true,
+  "alcohol": false
+}

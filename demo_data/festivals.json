@@ -1,0 +1,17 @@
+[
+  {"name": "new_year", "display": "New Year's Eve / Day", "month": 1, "day": 1, "importance": 9, "color": "#FFD700", "type": "national"},
+  {"name": "valentines_day", "display": "Valentine's Day", "month": 2, "day": 14, "importance": 8, "color": "#FF69B4", "type": "commercial"},
+  {"name": "holi", "display": "Holi", "month": 3, "day": 14, "importance": 8, "color": "#FF4500", "type": "hindu", "variable": true},
+  {"name": "poila_boishakh", "display": "Poila Boishakh (Bengali New Year)", "month": 4, "day": 14, "importance": 9, "color": "#FF8C00", "type": "bengali", "greeting_bengali": "শুভ নববর্ষ"},
+  {"name": "eid_ul_fitr", "display": "Eid ul-Fitr", "month": 4, "day": 10, "importance": 9, "color": "#32CD32", "type": "islamic", "variable": true},
+  {"name": "mothers_day", "display": "Mother's Day", "month": 5, "day": 12, "importance": 6, "color": "#FF69B4", "type": "commercial"},
+  {"name": "friendship_day", "display": "Friendship Day", "month": 8, "day": 4, "importance": 6, "color": "#FFA500", "type": "commercial"},
+  {"name": "independence_day", "display": "Independence Day", "month": 8, "day": 15, "importance": 7, "color": "#FF7722", "type": "national"},
+  {"name": "raksha_bandhan", "display": "Raksha Bandhan", "month": 8, "day": 19, "importance": 6, "color": "#FF69B4", "type": "hindu", "variable": true},
+  {"name": "teachers_day", "display": "Teacher's Day", "month": 9, "day": 5, "importance": 5, "color": "#4169E1", "type": "national"},
+  {"name": "durga_puja", "display": "Durga Puja", "month": 10, "day": 2, "importance": 10, "color": "#FF8C00", "type": "bengali", "variable": true, "greeting_bengali": "শুভ দুর্গাপূজা", "siliguri_boost": 1.5},
+  {"name": "diwali", "display": "Diwali", "month": 11, "day": 1, "importance": 9, "color": "#FFD700", "type": "hindu", "variable": true, "greeting_hindi": "शुभ दीपावली"},
+  {"name": "kali_puja", "display": "Kali Puja", "month": 11, "day": 1, "importance": 7, "color": "#8B0000", "type": "bengali", "variable": true},
+  {"name": "christmas", "display": "Christmas", "month": 12, "day": 25, "importance": 7, "color": "#228B22", "type": "christian"},
+  {"name": "new_year_eve", "display": "New Year's Eve", "month": 12, "day": 31, "importance": 9, "color": "#C0C0C0", "type": "national"}
+]

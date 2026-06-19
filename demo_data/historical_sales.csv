@@ -1,0 +1,91 @@
+date,footfall,revenue_inr,top_item,weather
+2026-03-21,89,18512,Pizza,hot
+2026-03-22,74,13320,Tandoori Maggi,cold
+2026-03-23,56,12768,Pizza,sunny
+2026-03-24,59,12390,Brownie Frappe,hot
+2026-03-25,61,13420,Hot Chocolate,cold
+2026-03-26,42,9702,Waffle,rainy
+2026-03-27,70,13230,Brownie Frappe,cold
+2026-03-28,74,18130,Cappuccino,cold
+2026-03-29,93,22134,Cappuccino,cloudy
+2026-03-30,51,10863,Pizza,sunny
+2026-03-31,48,11040,Ice Tea,sunny
+2026-04-01,47,10904,Brownie Frappe,rainy
+2026-04-02,54,9720,Hot Chocolate,hot
+2026-04-03,48,9504,Cappuccino,cloudy
+2026-04-04,97,22989,Pizza,cold
+2026-04-05,85,15300,Cappuccino,cold
+2026-04-06,77,18788,Ice Tea,cold
+2026-04-07,59,12095,Pizza,sunny
+2026-04-08,63,12789,Ice Tea,sunny
+2026-04-09,45,11070,Cold Coffee,cold
+2026-04-10,65,16770,Waffle,rainy
+2026-04-11,63,11970,Cold Coffee,cloudy
+2026-04-12,92,22540,Tandoori Maggi,cloudy
+2026-04-13,56,13608,Ice Tea,sunny
+2026-04-14,70,13370,Falafel Wrap,sunny
+2026-04-15,74,16354,Falafel Wrap,rainy
+2026-04-16,48,12672,Ice Tea,rainy
+2026-04-17,72,16920,Waffle,hot
+2026-04-18,96,21888,Waffle,rainy
+2026-04-19,63,16758,Falafel Wrap,hot
+2026-04-20,55,10010,Cold Coffee,sunny
+2026-04-21,77,18326,Tandoori Maggi,cold
+2026-04-22,55,11110,Tandoori Maggi,cold
+2026-04-23,54,13068,Ice Tea,cloudy
+2026-04-24,65,16900,Pizza,cold
+2026-04-25,106,22048,Tandoori Maggi,hot
+2026-04-26,95,22040,Pizza,cold
+2026-04-27,78,20592,Tandoori Maggi,hot
+2026-04-28,72,15480,Cappuccino,sunny
+2026-04-29,51,9843,Pizza,rainy
+2026-04-30,74,18056,Hot Chocolate,rainy
+2026-05-01,67,12864,Cold Coffee,cloudy
+2026-05-02,67,17487,Hot Chocolate,hot
+2026-05-03,83,21580,Cappuccino,sunny
+2026-05-04,62,11842,Brownie Frappe,cloudy
+2026-05-05,54,12474,Ice Tea,sunny
+2026-05-06,77,15708,Brownie Frappe,hot
+2026-05-07,50,11200,Tandoori Maggi,sunny
+2026-05-08,52,13052,Hot Chocolate,cloudy
+2026-05-09,92,20792,Waffle,sunny
+2026-05-10,78,20826,Pizza,sunny
+2026-05-11,65,15990,Tandoori Maggi,cold
+2026-05-12,65,14365,Waffle,cold
+2026-05-13,69,16077,Ice Tea,hot
+2026-05-14,54,11070,Pizza,cold
+2026-05-15,70,13090,Ice Tea,sunny
+2026-05-16,83,20667,Suto Special Frappe,hot
+2026-05-17,72,17496,Waffle,cloudy
+2026-05-18,75,15075,Cappuccino,sunny
+2026-05-19,42,9408,Waffle,rainy
+2026-05-20,61,13237,Cappuccino,rainy
+2026-05-21,64,15104,Brownie Frappe,cold
+2026-05-22,56,14784,Pizza,hot
+2026-05-23,77,14861,Ice Tea,cold
+2026-05-24,87,16269,Cappuccino,rainy
+2026-05-25,55,13035,Ice Tea,cloudy
+2026-05-26,50,10100,Suto Special Frappe,cold
+2026-05-27,54,12204,Cappuccino,cloudy
+2026-05-28,63,14112,Brownie Frappe,hot
+2026-05-29,56,11760,Ice Tea,hot
+2026-05-30,73,16571,Tandoori Maggi,rainy
+2026-05-31,93,23808,Cappuccino,cloudy
+2026-06-01,51,11118,Brownie Frappe,hot
+2026-06-02,63,14427,Pizza,cold
+2026-06-03,54,14580,Brownie Frappe,cold
+2026-06-04,41,10619,Pizza,hot
+2026-06-05,48,10608,Waffle,rainy
+2026-06-06,64,12416,Suto Special Frappe,cold
+2026-06-07,97,19788,Suto Special Frappe,rainy
+2026-06-08,56,12880,Cappuccino,cloudy
+2026-06-09,65,14560,Ice Tea,sunny
+2026-06-10,66,16896,Pizza,cold
+2026-06-11,61,13420,Cold Coffee,rainy
+2026-06-12,51,10557,Cappuccino,hot
+2026-06-13,73,17593,Cappuccino,cloudy
+2026-06-14,72,15408,Ice Tea,cold
+2026-06-15,53,10759,Cappuccino,cloudy
+2026-06-16,66,16038,Tandoori Maggi,cloudy
+2026-06-17,51,11628,Tandoori Maggi,hot
+2026-06-18,43,11524,Pizza,hot
