@@ -19,6 +19,19 @@ def _get(key: str, default: str = "") -> str:
     return val or default
 
 
+def _writable_dir() -> str:
+    """Return a writable base directory.
+    On Streamlit Cloud the repo root (/mount/src/...) is read-only,
+    so we fall back to /tmp which is always writable."""
+    src_dir = os.path.dirname(os.path.abspath(__file__))
+    if os.access(src_dir, os.W_OK):
+        return src_dir          # local development — write beside the code
+    return "/tmp/suto_cafe"     # Streamlit Cloud / any read-only host
+
+
+_BASE = _writable_dir()
+
+
 class Config:
     GROQ_API_KEY: str = _get("GROQ_API_KEY")
     OPENWEATHER_API_KEY: str = _get("OPENWEATHER_API_KEY")
@@ -26,10 +39,10 @@ class Config:
     GROQ_MODEL: str = _get("GROQ_MODEL", "llama-3.1-8b-instant")
     CAFE_NAME: str = _get("CAFE_NAME", "Suto Café")
     CAFE_LOCATION: str = _get("CAFE_LOCATION", "Siliguri, West Bengal")
-    DB_PATH: str = os.path.join(os.path.dirname(__file__), "suto_poc.db")
-    OUTPUT_DIR: str = os.path.join(os.path.dirname(__file__), "output")
-    BANNERS_DIR: str = os.path.join(os.path.dirname(__file__), "output", "banners")
-    POSTS_DIR: str = os.path.join(os.path.dirname(__file__), "output", "posts")
+    DB_PATH: str = os.path.join(_BASE, "suto_poc.db")
+    OUTPUT_DIR: str = os.path.join(_BASE, "output")
+    BANNERS_DIR: str = os.path.join(_BASE, "output", "banners")
+    POSTS_DIR: str = os.path.join(_BASE, "output", "posts")
 
     @property
     def llm_available(self) -> bool:
