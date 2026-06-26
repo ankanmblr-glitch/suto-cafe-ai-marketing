@@ -31,6 +31,7 @@ from agents.weather_agent import WeatherAgent
 from agents.festival_agent import FestivalAgent
 from agents.time_agent import TimeAgent
 from agents.sales_prediction_agent import SalesPredictionAgent
+from agents.copywriter_agent import _coerce_text
 from orchestrator import run_campaign_cycle
 
 # ── Init DB once ────────────────────────────────────────────────────────────
@@ -445,21 +446,21 @@ elif page == "📄 Content Preview":
 
         with tab_fb:
             for variant_key, label in [("a","A — Hindi/Emotional"), ("b","B — English/Punchy"), ("c","C — Mixed/Family")]:
-                txt = copy.facebook.get(variant_key, "")
+                txt = _coerce_text(copy.facebook.get(variant_key, ""))
                 badge = "✅ Selected" if variant_key == copy.selected else ""
                 st.markdown(f"**Variant {label}** {badge}")
                 st.markdown(f'<div class="copy-box">{txt}</div>', unsafe_allow_html=True)
 
         with tab_ig:
             for variant_key, label in [("a","A — Hindi/Emotional"), ("b","B — English/Punchy"), ("c","C — Mixed/Family")]:
-                txt = copy.instagram.get(variant_key, "")
+                txt = _coerce_text(copy.instagram.get(variant_key, ""))
                 badge = "✅ Selected" if variant_key == copy.selected else ""
                 st.markdown(f"**Variant {label}** {badge}")
                 st.markdown(f'<div class="copy-box">{txt}</div>', unsafe_allow_html=True)
 
         with tab_wa:
             for variant_key, label in [("a","A — Hindi/Emotional"), ("b","B — English/Punchy"), ("c","C — Mixed/Family")]:
-                txt = copy.whatsapp.get(variant_key, "")
+                txt = _coerce_text(copy.whatsapp.get(variant_key, ""))
                 badge = "✅ Selected" if variant_key == copy.selected else ""
                 st.markdown(f"**Variant {label}** {badge}")
                 st.markdown(f'<div class="copy-box">{txt}</div>', unsafe_allow_html=True)
