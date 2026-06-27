@@ -6,9 +6,19 @@ Generates 3 variants per channel: Hindi-heavy, English-punchy, Mixed.
 from __future__ import annotations
 import json
 from dataclasses import dataclass, field
-from typing import Dict
+from typing import Dict, Any
 from config import config
 from agents.content_strategy_agent import CampaignBrief
+
+
+def _coerce_text(v: Any) -> str:
+    """
+    Groq sometimes returns variant values as {"text": "...", "image": ""}
+    instead of a plain string. Always return a plain string.
+    """
+    if isinstance(v, dict):
+        return str(v.get("text") or v.get("caption") or v.get("content") or "").strip()
+    return str(v).strip() if v else ""
 
 
 @dataclass
@@ -30,12 +40,22 @@ Brand voice: warm, local, youthful. Mix Hindi/Bengali naturally. Short punchy se
 Given a campaign brief, generate copy for facebook, instagram, and whatsapp.
 Each channel needs 3 variants: a (Hindi-heavy/emotional), b (English/punchy/youth), c (mixed/story/family).
 
-Instagram: 3-5 sentences, 5-8 emojis, 10-15 hashtags at end, end with question or tag CTA.
-Facebook: 4-5 sentences, storytelling tone, 3-5 hashtags, include address hint.
-WhatsApp: 2-3 lines MAX, no hashtags, conversational, like a friend texting, mention price.
+Platform format rules:
+- Instagram: 3-5 sentences, 5-8 emojis woven in, 10-15 hashtags on a new line at the end, end with a question or tag-a-friend CTA.
+- Facebook: 4-6 sentences, storytelling/warm tone, 3-5 hashtags at end, include "Hill Cart Road" or area hint.
+- WhatsApp: 2-3 short lines MAX, zero hashtags, conversational like a friend texting, mention a price (e.g. "from ₹130").
 
-Return ONLY a JSON object with keys: facebook, instagram, whatsapp (each with a, b, c variants),
-selected (recommended letter), selection_reason."""
+CRITICAL OUTPUT RULES:
+1. Every variant value MUST be a plain text string. Do NOT wrap it in an object or dict.
+2. Do NOT include any "image", "media", or "url" keys anywhere.
+3. Return ONLY a JSON object shaped exactly like this:
+{
+  "facebook":  {"a": "<plain text>", "b": "<plain text>", "c": "<plain text>"},
+  "instagram": {"a": "<plain text>", "b": "<plain text>", "c": "<plain text>"},
+  "whatsapp":  {"a": "<plain text>", "b": "<plain text>", "c": "<plain text>"},
+  "selected": "b",
+  "selection_reason": "<one sentence>"
+}"""
 
 
 class CopywriterAgent:
@@ -71,10 +91,15 @@ CTA: {brief.cta}
             temperature=0.85
         )
         data = json.loads(resp.choices[0].message.content)
+
+        def _sanitise_channel(raw: dict) -> dict:
+            """Ensure every variant value is a plain string."""
+            return {k: _coerce_text(v) for k, v in raw.items()} if isinstance(raw, dict) else {}
+
         return CopyVariants(
-            facebook=data.get("facebook", {}),
-            instagram=data.get("instagram", {}),
-            whatsapp=data.get("whatsapp", {}),
+            facebook=_sanitise_channel(data.get("facebook", {})),
+            instagram=_sanitise_channel(data.get("instagram", {})),
+            whatsapp=_sanitise_channel(data.get("whatsapp", {})),
             selected=data.get("selected", "b"),
             selection_reason=data.get("selection_reason", "Best balance of local feel and reach"),
             llm_source="groq"
